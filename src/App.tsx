@@ -5,7 +5,15 @@ import DisplayName from "./components/DisplayName";
 export default function App() {
   const [showForm, setshowForm] = useState(false);
   const [showResult, setshowResult] = useState(false);
-  const names = ["Gavin Mendonza", "Glenn Mendonza", "Felcy Mendonza"];
+  const names = [
+    "Violet castelino",
+    "Anita Macwan",
+    "Winston Rodrigues",
+    "Cecelia Nathan",
+    "Felcy Mendoza",
+    "Jubilee cardoza",
+    "Chrisanta Dies",
+  ];
   const [currentName, setcurrentName] = useState(names[0]);
   const [counter, setCounter] = useState(0);
   const [result, setresult] = useState("");

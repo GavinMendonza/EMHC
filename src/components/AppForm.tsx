@@ -12,7 +12,11 @@ interface props {
 const AppForm = (props: props) => {
   const [Tags, setTags] = useState("");
   const handleAddTags = (string: string) => {
-    setTags(Tags + " " + string);
+    if (string == "P" || string == "A") {
+      setTags(string);
+    } else {
+      setTags(Tags + " " + string);
+    }
   };
 
   return (

@@ -39,7 +39,7 @@ const DisplayName = (props: props) => {
 
   return (
     <>
-      <div className={` h-full w-full mb-5 ${props.result && "mt-72 py-24"}`}>
+      <div className={` h-full w-full mb-5 ${props.result && "mt-32 py-20"}`}>
         <div
           className={`stats h-full  bg-gray-900 w-full shadow ${
             !props.result ? "place-content-center" : "py-8"
@@ -51,7 +51,9 @@ const DisplayName = (props: props) => {
                 props.result && "text-base"
               }`}
             >
-              {props.name}
+              {props.result
+                ? "Attendance \n9.40 am mass in terrace:\n\n" + props.name
+                : props.name}
             </div>
           </div>
         </div>
