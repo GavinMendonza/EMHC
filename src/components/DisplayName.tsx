@@ -61,7 +61,7 @@ const DisplayName = (props: props) => {
           <div className="w-full ">
             <button
               onClick={() => {
-                copy(props.name);
+                copy("Attendance \n9.40 am mass in terrace:\n\n" + props.name);
                 setcopied(true);
               }}
               className="absolute btn right-0 mr-6 mt-2 btn-accent lowercase"
