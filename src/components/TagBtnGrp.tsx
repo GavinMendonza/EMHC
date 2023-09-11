@@ -24,12 +24,12 @@ const TagBtnGrp = (props: props) => {
         </button>
       </div>
       <div className="flex gap-2 justify-end pr-6 mt-2">
-        <button
+        {/* <button
           className="btn btn-secondary"
           onClick={() => props.handleAddTags("A")}
         >
           Absent
-        </button>
+        </button> */}
         <button
           className="btn btn-accent"
           onClick={() => props.handleAddTags("P")}
