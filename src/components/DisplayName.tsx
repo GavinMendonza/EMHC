@@ -9,7 +9,7 @@ interface props {
 const DisplayName = (props: props) => {
   // const [isCopied, setIsCopied] = useState(false);
 
-  const [value, copy] = useCopyToClipboard();
+  const [_value, copy] = useCopyToClipboard();
 
   // async function copyTextToClipboard() {
   //   if ("clipboard" in navigator) {
