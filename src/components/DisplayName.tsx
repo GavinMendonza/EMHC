@@ -1,4 +1,4 @@
-// import { useState } from "react";
+import { useState } from "react";
 import { useCopyToClipboard } from "usehooks-ts";
 
 interface props {
@@ -10,6 +10,7 @@ const DisplayName = (props: props) => {
   // const [isCopied, setIsCopied] = useState(false);
 
   const [_value, copy] = useCopyToClipboard();
+  const [copied, setcopied] = useState(false);
 
   // async function copyTextToClipboard() {
   //   if ("clipboard" in navigator) {
@@ -38,10 +39,10 @@ const DisplayName = (props: props) => {
 
   return (
     <>
-      <div className=" h-full w-full mb-5">
+      <div className={` h-full w-full mb-5 ${props.result && "mt-72 py-24"}`}>
         <div
           className={`stats h-full  bg-gray-900 w-full shadow ${
-            !props.result && "place-content-center"
+            !props.result ? "place-content-center" : "py-8"
           }`}
         >
           <div className="stat" id="copy-target">
@@ -55,9 +56,17 @@ const DisplayName = (props: props) => {
           </div>
         </div>
         {props.result && (
-          <button onClick={() => copy(props.name)} className="btn">
-            Copy
-          </button>
+          <div className="w-full ">
+            <button
+              onClick={() => {
+                copy(props.name);
+                setcopied(true);
+              }}
+              className="absolute btn right-0 mr-6 mt-2 btn-accent lowercase"
+            >
+              {copied ? "Copied!" : "Copy"}
+            </button>
+          </div>
         )}
       </div>
     </>
