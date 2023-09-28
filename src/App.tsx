@@ -11,7 +11,6 @@ export default function App() {
     "Winston Rodrigues",
     "Cecelia Nathan",
     "Felcy Mendoza",
-    "Jubilee cardoza",
     "Chrisanta Dies",
   ];
   const [currentName, setcurrentName] = useState(names[0]);
