@@ -6,12 +6,11 @@ export default function App() {
   const [showForm, setshowForm] = useState(false);
   const [showResult, setshowResult] = useState(false);
   const names = [
-    "Violet castelino",
-    "Anita Macwan",
+    "Violet Castelino",
+    "Violet Quadros",
     "Winston Rodrigues",
-    "Cecelia Nathan",
-    "Felcy Mendoza",
-    "Chrisanta Dies",
+    "Felcy Mendonza",
+    "Chrisanta Dias",
   ];
   const [currentName, setcurrentName] = useState(names[0]);
   const [counter, setCounter] = useState(0);
